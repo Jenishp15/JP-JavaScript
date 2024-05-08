@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: lightyellow;
+            margin: auto;
+            text-align: center;
+            height: 500px;
+            width: 700px;
+            padding: 50px;
+            border: 1px solid grey;
+            font-family: poppins;
+        }
+
+        h1 {
+            color: darkgreen;
+            text-shadow: 2px 2px 5px white;
+        }
+
+        h2 {
+            color: crimson;
+            text-shadow: 2px 2px 5px lightcyan;
+        }
+
+        h3 {
+            color: darkmagenta;
+            text-shadow: 2px 2px 5px white;
+        }
+
+        span {
+            font-size: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="count"></h1>
+        <h1>Time Rimening :</h1>
+        <h2 id="count"></h2>
+
+        <h3 id="qutoes"></h3>
+    </div>
+
+    <script>
+
+        let timer = 60
+        setInterval(() => {
+            if (timer >= 0) {
+                document.getElementById("count").innerText = timer + 's'
+                timer--
+            } else {
+                clearInterval(timerclock)
+                alert("time out");
+            }
+
+        }, 1000);
+
+        let qutoes = ["You will face many defeats in life, but never let yourself be defeated.",
+            "Life is a long lesson in humility",
+            "To thine own self, be true."];
+
+        let index = 0;
+        setInterval(function () {
+            index = (index + 1) % qutoes.length;
+            document.getElementById("qutoes").innerHTML = qutoes[index]
+        }, 1000)
+    </script>
+</body>
+
+</html>

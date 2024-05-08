@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+
+    <style>
+        div {
+            background-color: aquamarine;
+            height: 500px;
+            width: 500px;
+            padding: 50px;
+            margin: 62px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h1 id="count"></h1>
+        <h1 id="demo"></h1>
+        <h1>Times to go...</h1>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+    </div>
+
+    <script>
+        
+
+        let timer=60
+
+        let timerclock = setInterval(() => {
+                if (timer >= 0) {
+                    document.getElementById("count").innerText = timer + 's'
+                    timer--
+                } else {
+                    clearInterval(timerclock)
+                    alert("time out");
+                }
+
+            }, 1000);
+
+            function stop(){
+                clearInterval(timerclock)
+            }
+
+            function start(){
+                setInterval(() => {
+                if (timer >= 0) {
+                    document.getElementById("count").innerText = timer + 's'
+                    timer--
+                } else {
+                    clearInterval(timerclock)
+                    // alert("time out");
+                }
+            },1000)
+            }
+        
+    </script>
+
+
+    <!-- <script>
+        let timer = 60;
+
+
+        let start=document.getElementById("start").addEventListener("click",()=>{
+            let timerclock = setInterval(() => {
+                if (timer >= 0) {
+                    document.getElementById("count").innerText = timer + 's'
+                    timer--
+                } else {
+                    clearInterval(timerclock)
+                    alert("time out");
+                }
+
+            }, 1000)})
+        let stop=document.getElementById("stop").addEventListener("click",()=>{
+            clearInterval(timerclock)
+        })
+
+        
+
+        // let timer = 60;
+        // // let timerclock = setInterval(time, 1000);
+
+        //     let timerclock = setInterval(() => {
+        //         if (timer >= 0) {
+        //             document.getElementById("count").innerText = timer + 's'
+        //             timer--
+        //         } else {
+        //             clearInterval(timerclock)
+        //             alert("time out");
+        //         }
+
+        //     }, 1000)
+        // // }
+        // start()
+
+        // function stop(){
+        //     clearInterval(timerclock)
+        // }
+
+    </script> -->
+
+</body>
+
+</html>

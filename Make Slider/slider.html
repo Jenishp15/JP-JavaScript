@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        .main{
+            display: flex;
+            align-items: center;
+        }
+        i{
+            font-size: 50px;
+        }
+        img{
+            height:500px;
+            width: 100%;
+            border-radius: 25px;
+        }
+        .gallery{
+            display: flex;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        <div id="prevbtn"><i class="bi bi-chevron-left"></i></div>
+        
+        <img src="" alt="" id="slider">
+
+        <div id="nextbtn"><i class="bi bi-chevron-right"></i></div>
+
+    </div>
+
+
+    <script>
+        let arr=["img/img-1.webp","img/img-2.webp","img/img-3.webp","img/img-4.webp"]
+        let prevbtn=document.getElementById("prevbtn");
+        let nextbtn=document.getElementById("nextbtn");
+        document.getElementById("slider").src=arr[0]
+
+        let index=0;
+
+        // setInterval(()=>{
+        //     index=(index+1)%arr.length;
+        //     document.getElementById("slider").src=arr[index]
+        // },1000)
+
+        setInterval(()=>{
+            nextbtn.addEventListener("click",()=>{
+                index=(index+1)%arr.length;
+            document.getElementById("slider").src=arr[index]
+            })
+        },500)
+        
+        setInterval(()=>{
+            prevbtn.addEventListener("click",()=>{
+                index=(index+1)%arr.length;
+            document.getElementById("slider").src=arr[index]
+            })
+        },500)
+    </script>
+
+</body>
+</html>
