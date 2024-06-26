@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        let arr = [1,2,3,4,5,6,7,8,9,10]
+        let sum = 0;
+
+        function prime(num){
+            let count = 0;
+
+            for(let i = 1;i<num; i++){
+                if(num%i==0){
+                    count++;
+                }
+            }
+            if(count==2){
+                return num
+            }
+            else{
+                return false
+            }
+        }
+        function Sum(array){
+            let sum =0;
+            for(let i=0;i<array.length;i++){
+                let ans = prime(array[i]);
+                if(ans){
+                    sum += ans;
+                }
+            }
+            console.log(sum)
+        }
+        Sum(arr)
+    </script>
+    
+</body>
+</html>

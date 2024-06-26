@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <!-- <p class="csk" id="dhoni">I am Dhoni from Chennai</p>
+    <p class="mi">I am Sachin from Mumbai</p>
+    <p class="rcb">I am Kohli from Banglore</p>
+    <p class="mi">I am Rohit from Mumbai</p>
+    <p class="rcb" id="abd">I am ABD from Banglore</p>
+    <p class="csk">I am Raina from Chennai</p> -->
+
+    <!-- ============================================== -->
+    
+    <!-- <div class="container"></div> -->
+    
+    <!-- ============================================== -->
+
+        <button>click</button>
+
+    <script>
+
+        // let chennai=document.querySelectorAll(".csk")
+        // console.log(chennai)
+
+        // for(let c=0;c<chennai.length;c++){
+        //     // console.log(chennai[c])
+        //     chennai[c].style.color="yellow"
+        //     chennai[c].style.backgroundColor="orange"
+        //     chennai[c].style.padding="5px"
+        // }
+
+        // =============================================
+        
+        // const h3=document.createElement("h3")
+        // h3.innerText="I am H3";
+        
+        // document.querySelector("body > .container").append(h3)
+        
+        // console.log(h3)
+        
+        // =============================================
+
+        // const button=document.createElement("button")
+        // button.innerText="When you click you see magic ";
+        // document.querySelector("body").append(button);
+
+        // button = document.addEventListener("click",()=>{
+        //     const h3 = document.createElement("h3")
+        //     h3.innerText="life is experiment,test your exciment"
+        //     document.querySelector("body").append(h3)
+
+        // })
+
+        // =============================================
+
+        let btn=document.querySelector("button")
+        btn.addEventListener("click",()=>{
+            const img=document.createElement("img");
+            img.setAttribute("src","https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg");
+            document.querySelector("body").append(img)
+        })
+
+    </script>
+
+
+<!-- id -> single
+class -> array
+tagname -> array
+querselector -> first element
+queryselectorall -> all element array -->
+
+</body>
+</html>

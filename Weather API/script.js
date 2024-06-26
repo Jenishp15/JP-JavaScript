@@ -2,7 +2,7 @@ function Fetchdata(){
     fetch("https://reqres.in/api/users?page=2")
     .then(res=>res.json())
     .then(res=>cardList(res.data))
-    .catch(err=>console.assert.log(err))
+    .catch(err=>console.log(err))
 }
 Fetchdata()
 

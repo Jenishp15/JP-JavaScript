@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIGITAL CLOCK</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #b58022;
+        /* direction,color1,color2...link--- */
+      }
+
+      #clock > div {
+        padding: 30px;
+        margin: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        box-shadow: 5px 5px 23px #7b5717, -5px -5px 23px #ffc535;
+      }
+
+      span {
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <div id="clock">
+      <div id="hours"></div>
+      <span>:</span>
+      <div id="minutes"></div>
+      <span>:</span>
+      <div id="seconds"></div>
+      <div id="half"></div>
+    </div>
+    
+
+  <script>
+
+setInterval(function(){
+    
+    let date = new Date();
+
+    if(date.getHours()>=12){
+      document.getElementById("half").innerText="PM";
+    }else{
+      document.getElementById("half").innerText="AM";
+    }
+
+    document.getElementById("hours").innerText=date.getHours();
+    document.getElementById("minutes").innerText=date.getMinutes();
+    document.getElementById("seconds").innerText=date.getSeconds();
+    
+},1000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.header{
+    /* background: rgb(4,9,28); */
+    background: linear-gradient(315deg, rgba(4,9,28,1) 53%, rgba(17,32,91,1) 100%);
+    /* background-image: url("https://img.freepik.com/free-vector/abstract-digital-grid-vector-black-background_53876-111550.jpg?t=st=1718683543~exp=1718687143~hmac=8bdbaffc5c95b81ea17c8751c903eeadf6e781cef23b2f18487c04e303087f5f&w=996"); */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 100vh;
+    padding: 0px;
+}
+header nav{
+    padding: 10px 30px;
+    width: 80%;
+    margin: auto;
+    border-radius: 50px;
+    background-color: #070F2B;
+    /* background-color: rgb(25, 50, 61); */
+}
+nav .name{
+    align-self: center;
+    font-size: 25px;
+}
+nav{
+    padding: 10px 0px;
+}
+nav ul{
+    margin: 0%;
+    padding: 0px;
+}
+nav ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+nav ul a:hover{
+    color: white;
+}
+.text-area{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    align-items: center;
+    height: 80%;
+}
+.text-area .heading h5{
+    font-size: 20px;
+}
+.text-area .heading h1{
+    font-size: 55px;
+}
+.text-area .social li {
+    list-style: none;
+    font-size: 20px;
+    margin: 50px 0px ;
+}
+.text-area .social li a{
+    text-decoration: none;
+    color: white;
+}
+.text-area button{
+    background-color: transparent;
+    color: white;
+    padding: 12px 30px;
+    margin: 10px 0px;
+    border: 1px solid white ;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+.text-area button:hover{
+    background-color: white;
+    color: black;
+}
+.social .linkedin{
+    background-color: #0072b1;
+    padding: 12px 20px;
+    border-radius: 5px;
+    filter:grayscale(1) ;
+    transition: 0.2s;
+}
+.social .linkedin:hover{
+    filter:grayscale(0);
+    transform: scale(1.5);
+    box-shadow: 0px 0px 50px#0072b1;
+}
+.social .github{
+    background-color:  #bd2c00;
+    padding: 12px 25px;
+    border-radius: 5px;
+    filter:grayscale(1) ;
+    transition: 0.2s;
+}
+.social .github:hover{
+    filter:grayscale(0);
+    transform: scale(1.5);
+    box-shadow: 0px 0px 50px#bd2c00 ;
+}
